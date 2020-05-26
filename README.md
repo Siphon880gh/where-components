@@ -32,7 +32,7 @@ function whereComponent(selector, colorGroupIndex=0, error="") {
         $el.on("mouseover", (event)=>{
             event.preventDefault();
             event.stopPropagation();
-            console.log(`%cComponent: ${selector}`, `background-color:${colorFaded}; color:${colorRegular}; padding:5px;`);
+            console.log(`%cComponent: ${selector}`, `background-color:${colorFaded}; color:${colorRegular}; padding:5px;`, $el);
         })
     } else {
         if(error.length)
