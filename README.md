@@ -2,8 +2,12 @@ Where Components
 ===
 By Weng Fei Fung. If your website follows a component architecture where there are files named after DOMs, you may get confused when there are too many components, such as which components contains which, which is what, etc. You can copy and paste this code snippet into the console, then run functions to highlight those components in different colors. If the component does not exist, then it can give you a reminder on how to show that component on the website (such as clicking a button to create a new element on the webpage). When moving a mouse over the component, you will also see the component selector in the console as well.
 
+Eg. This tool highlighting the components on a webpage in different colors and giving mouseoverable elements for inspecting in the web browser console:
+![Image of componenets](example.png)
+
 Console snippet
 ---
+### Load this function definition:
 ```
 function whereComponent(selector, colorGroupIndex=0, error="") {
     var colorGroups = [
@@ -44,7 +48,10 @@ function whereComponent(selector, colorGroupIndex=0, error="") {
 } // whereComponent
 ```
 
-Console highlighting
+### Call functions on components:
+_whereComponent(selector, colorGroup, domInstructions)_
+- Optional: colorGroup is any number. Those components called with the same number has the same color.
+- Optional: domInstructions are instructions on how to setup the GUI to have the components visible. Eg. Such as pressing a button to show a screen.
 ```
 whereComponent(".indicator-current-group-completed", 0, "Not found. Make sure to create a collection, then a habit.");
 whereComponent(".habit", 1, "Not found. Make sure to create a collection, then a habit.");
